@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Электросамокаты</title>
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <div class="topnav">
+        <img src="nicon.jpg" alt="logo" class="logo">
+        <nav class="btn-pos">
+            <a href="index.html" class="btn">История электросамокатов</a>
+            <a href="second.html" class="btn">Развитие самокатов в ХХ веке</a>
+            <a href="third.html" class="btn">Виды электросамокатов</a>
+            <a href="fourth.html" class="btn">Производители</a>
+            <a href="fifth.html" class="btn ">Тест</a>
+        </nav>
+    </div>
+<div class="container1 last">
+  <div class="quiz">
+    <div id="test">
+  	<div class="testq">
+  		<p >Какой год принято считать официальной датой начала истории электросамокатов ?</p>
+  		<input class="input" data-right="1761">
+  	</div>
+  	<div class="testq">
+  		<p>Назовите полное имя и фамилию человека создавшего аппарат называемый <<дрезина>> ?</p>
+  		<input class="input" data-right="Фон Дрез">
+  	</div>
+  	<div class="testq">
+  		<p >В каком году Джон Бойд Данлоп запатентовал резиновые камеры и начал заниматься их выпуском ?</p>
+  		<input class="input" data-right="1888">
+  	</div>
+    <div class="testq">
+      <p >Какие существуют виды баттарей для электросамокатов(перечислите через пробел с заглавной буквы) ?</p>
+      <input class="input" data-right="Литий-ионные Свинцовые">
+    </div>
+    <div class="testq">
+      <p >В каком году изготовили городской самокат Puegeot Scoot'Elec, стильный, быстрый (25 миль/час), с никель-кадмиевой батареей ?</p>
+      <input class="input" data-right="1996">
+    </div>
+  </div>
+  	<button class="sub" id="button">Проверка</button>
+    <script type="text/javascript">
+    let button = document.querySelector('#button');
+
+  button.addEventListener('click', function() {
+  	let inputs = document.querySelectorAll('#test input');
+
+  	for (let input of inputs) {
+  		if (input.value == input.dataset.right) {
+  			input.classList.add('correct');
+  		} else {
+  			input.classList.add('incorrect');
+  		}
+  	}
+  });
+    </script>
+</div>
+  </div>
+  <div class="footer">
+      2021&copy; Student MIREA ALL RIGHTS RESERVED
+  </div>
+  </body>
+  </html>
